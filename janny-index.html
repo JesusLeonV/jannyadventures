@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janny Adventures | Tours y Aventuras en Iquique</title>
+  <link rel="icon" type="image/png" href="img/jannylogo.png">
+  <meta name="description" content="Vive la mejor experiencia en Iquique con Janny Adventures. Tours de aventura, naturaleza, cultura y relajación en el norte de Chile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=17">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-header" id="nav-header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="img/jannylogo.png" alt="Janny Adventures" class="logo-img">
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#tours">Tours</a>
+        <a href="#guia">Guía</a>
+        <a href="#porque">Por qué nosotros</a>
+        <a href="#testimonios">Opiniones</a>
+        <a href="#cotizar">Cotizar</a>
+      </nav>
+      <a href="https://wa.me/56986183253" class="btn-wsp-nav" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" style="background-image: url('img/hero-beach.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Te damos la bienvenida</span>
+      <h1>Descubre mundos <span>increibles</span></h1>
+      <p class="hero-subtitle">Explora las playas mas hermosas de Brasil, el desierto de Chile y vive aventuras que recordaras para siempre. Tu proximo viaje comienza aqui.</p>
+      <div class="hero-buttons">
+        <a href="#tours" class="btn-primary">Ver Destinos</a>
+        <a href="https://wa.me/56986183253?text=Hola!%20Quiero%20información%20sobre%20los%20tours" class="btn-wsp-hero" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar ahora
+        </a>
+      </div>
+      <div class="hero-destinations">
+        <span class="hero-dest">🏖️ Brasil</span>
+        <span class="hero-dest">🏔️ Chile</span>
+        <span class="hero-dest">🌅 Latinoamerica</span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">28+</span><span class="stat-label">Tours disponibles</span></div>
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Clientes felices</span></div>
+        <div class="stat"><span class="stat-num" id="hero-rating">5★</span><span class="stat-label">Calificación</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section class="tours-section" id="tours">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestros Tours</span>
+        <h2>Elige tu <span>proxima aventura</span></h2>
+        <p>Tours exclusivos en Iquique, Brasil y Latinoamerica</p>
+      </div>
+      <div class="tour-filters" id="tour-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="Aventura">Aventura</button>
+        <button class="filter-btn" data-filter="Naturaleza">Naturaleza</button>
+        <button class="filter-btn" data-filter="Cultura">Cultura</button>
+        <button class="filter-btn" data-filter="Relax">Relax</button>
+        <button class="filter-btn" data-filter="Deporte">Deporte</button>
+        <button class="filter-btn" data-filter="Brasil">Brasil</button>
+      </div>
+      <div class="tours-grid" id="tours-grid"></div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section class="why-section" id="porque">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Por qué elegirnos?</span>
+        <h2>Tu aventura, <span>nuestra pasión</span></h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Seguridad primero</h3>
+          <p>Todos nuestros tours cuentan con protocolos de seguridad y seguros para tu tranquilidad.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Experiencia local</h3>
+          <p>Conocemos cada rincón de Iquique. Guías certificados y apasionados por su tierra.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Mejor precio</h3>
+          <p>Precios competitivos sin comprometer la calidad. Descuentos para grupos y familias.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚐</div>
+          <h3>Transporte cómodo</h3>
+          <p>Vehículos modernos y climatizados para que disfrutes del viaje desde el inicio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONOCE AL GUÍA -->
+  <section class="guide-section" id="guia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestro Equipo</span>
+        <h2>Conoce a <span>nuestro guía</span></h2>
+      </div>
+      <div class="guide-wrapper">
+        <div class="guide-content">
+          <div class="guide-avatar" id="guide-avatar">
+            <img src="img/guia-perfil.png" alt="Janny - Guía de turismo">
+          </div>
+          <p class="guide-desc">Apasionada por mostrar los mejores destinos de Brasil y el norte de Chile. Con <strong>6 años de experiencia</strong> guiando turistas nacionales e internacionales, garantiza una experiencia segura, divertida e inolvidable.</p>
+          <div class="guide-stats">
+            <div class="guide-stat">
+              <span class="guide-stat-num">6+</span>
+              <span class="guide-stat-label">Años de experiencia</span>
+            </div>
+            <div class="guide-stat">
+              <span class="guide-stat-num">500+</span>
+              <span class="guide-stat-label">Turistas guiados</span>
+            </div>
+            <div class="guide-stat">
+              <span class="guide-stat-num" id="guide-rating">--</span>
+              <span class="guide-stat-label">Calificación</span>
+            </div>
+          </div>
+          <div class="guide-badges">
+            <span class="guide-badge">🌍 Brasil y Chile</span>
+            <span class="guide-badge">🗣️ Español, Portugués e Italiano</span>
+            <span class="guide-badge">📋 Cadastur oficial</span>
+          </div>
+          <a href="https://cadastur.turismo.gov.br/cadastur/#!/public/qrcode/19913755654" target="_blank" class="guide-btn">
+            Conoce a nuestro guía
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials-section" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Opiniones</span>
+        <h2>Lo que dicen nuestros <span>clientes</span></h2>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Galería</span>
+        <h2>Momentos de <span>nuestros viajeros</span></h2>
+        <p>Las mejores fotos capturadas en medio de la aventura</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" style="background-image:url('img/tours/city-tour.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/laguna-roja.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/sandboard.png')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/parapente.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/salar-huasco.jpeg')"></div>
+        <div class="gallery-item" style="background-image:url('img/tours/termas-chusmiza.jpeg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COTIZACIÓN -->
+  <section class="cotizacion-section" id="cotizar">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cotiza tu aventura</span>
+        <h2>Planifica tu <span>próximo viaje</span></h2>
+        <p>Elige tu tour, la fecha y cuántas personas somos. Te enviaremos una cotización personalizada</p>
+      </div>
+      <div class="cotizacion-wrapper">
+        <form class="cotizacion-form" id="cotizacion-form">
+          <div class="form-group form-full">
+            <label for="cot-tour">Destino o Tour</label>
+            <select id="cot-tour" required>
+              <option value="">Selecciona un tour</option>
+              <option value="city-tour">City Tour Iquique + Navegación</option>
+              <option value="salitreras-oasis">Tour Salitreras & Oasis de Pica</option>
+              <option value="parque-isluga">Tour Parque Nacional Volcán Isluga</option>
+              <option value="laguna-roja">Tour Laguna Roja</option>
+              <option value="salar-huasco">Tour Parque Nacional Salar del Huasco</option>
+              <option value="huatacondo">Tour Huatacondo</option>
+              <option value="termas-mamina">Tour Mamiña</option>
+              <option value="salitreras">Tour Salitreras Humberstone & Santa Laura</option>
+              <option value="pisagua">Tour Pisagua</option>
+              <option value="geoglifos">Tour Geoglifos de Pintados</option>
+              <option value="termas-chusmiza">Tour Termas Chusmiza & Gigante de Tarapacá</option>
+              <option value="sandboard">Sandboard Cerro Dragón</option>
+              <option value="parapente">Parapente en Iquique</option>
+              <option value="buceo">Buceo en Iquique</option>
+              <option value="oasis-pica-matilla">Tour Oasis de Pica & Matilla</option>
+              <optgroup label="Brasil">
+                <option value="arraial-bahia">Arraijal Full Day (Bahía)</option>
+                <option value="helicoptero-arriveal-bahia">Voo Helicóptero Arraijal</option>
+                <option value="pasarela-plaza-cavo">Pasarela Privada (Plaza de Cavo)</option>
+                <option value="passeio-barco">Paseo de Barco (Plaza de Cavo)</option>
+                <option value="quadriciclo-plaza-cavo">Quadriciclo (Plaza de Cavo)</option>
+                <option value="paramotor-plaza-cavo">Paramotor (Plaza de Cavo)</option>
+                <option value="arraial-rio">Arraijal do Cabo (Rio)</option>
+                <option value="anga-reis">Anga dos Reis (Rio)</option>
+                <option value="rio-tour">Um Dia em Rio</option>
+                <option value="buzios">Buzios (Rio)</option>
+                <option value="petropolis">Petropolis (Rio)</option>
+                <option value="favela-tour">Favela Tour (Rio)</option>
+                <option value="helicoptero-rio">Voo Helicóptero (Rio)</option>
+                <option value="asa-delta">Asa Delta (Rio)</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cot-personas">N° de personas</label>
+              <select id="cot-personas" required>
+                <option value="">Selecciona</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas</option>
+                <option value="10">10+ personas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cot-bebes">Bebés (gratis)</label>
+              <select id="cot-bebes">
+                <option value="0">0</option>
+                <option value="1">1 bebé</option>
+                <option value="2">2 bebés</option>
+                <option value="3">3 bebés</option>
+                <option value="4">4 bebés</option>
+                <option value="5">5 bebés</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cot-fecha">Fecha de viaje</label>
+              <input type="date" id="cot-fecha" required>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div class="form-group">
+              <label for="cot-nombre">Tu nombre</label>
+              <input type="text" id="cot-nombre" placeholder="Nombre y apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="cot-telefono">Teléfono</label>
+              <input type="tel" id="cot-telefono" placeholder="+56 9 ..." required>
+            </div>
+          </div>
+          <p class="form-note">Descuento grupal: más de 5 personas restamos $10.000 por persona. Los bebés viajan gratis.</p>
+          <button type="submit" class="btn-primary btn-submit">Solicitar cotización</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para vivir una aventura?</h2>
+      <p>Contáctanos ahora y reserva tu tour favorito</p>
+      <a href="https://wa.me/56986183253?text=Hola!%20Quiero%20reservar%20un%20tour" class="btn-wsp-cta" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <img src="img/jannylogo.png" alt="Janny Adventures" class="footer-logo-img">
+            <span class="footer-brand-name">Janny Adventures</span>
+          </a>
+          <p class="footer-desc">Tours y aventuras en Iquique, Chile. Vive el norte como nunca antes.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <a href="https://wa.me/56986183253" target="_blank">+56 9 8618 3253</a>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:info@jannyadventures.com">info@jannyadventures.com</a>
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Iquique, Chile
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Janny Adventures. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="politica-cancelacion.html">Cancelación</a>
+          <span class="footer-sep">·</span>
+          <a href="politica-privacidad.html">Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56986183253?text=Hola!%20Quiero%20información%20sobre%20los%20tours" class="wsp-float" target="_blank" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-panel" id="modal-panel">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-hero" id="modal-hero"></div>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <div class="modal-meta" id="modal-meta"></div>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-grid" id="modal-grid"></div>
+        <div class="modal-reviews" id="modal-reviews"></div>
+        <div class="modal-booking" id="modal-booking">
+          <h4>Agenda tu fecha</h4>
+          <div class="booking-row">
+            <div class="form-group">
+              <label for="bk-personas">Personas</label>
+              <select id="bk-personas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="10">10+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bk-bebes">Bebés (gratis)</label>
+              <select id="bk-bebes">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bk-fecha">Fecha</label>
+              <input type="date" id="bk-fecha">
+            </div>
+          </div>
+          <p class="form-note">Más de 5 personas restamos $10.000 por persona. Los bebés viajan gratis.</p>
+          <button class="btn-primary btn-submit" id="btn-booking">Agendar por WhatsApp</button>
+        </div>
+        <div class="modal-footer">
+          <span class="modal-price" id="modal-price"></span>
+          <a class="btn-wsp-modal" id="btn-wsp-modal" href="#" target="_blank">
+            Reservar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=17"></script>
+</body>
+</html>
