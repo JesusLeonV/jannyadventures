@@ -26,7 +26,7 @@
       id: 'salitreras-oasis',
       title: 'Tour Salitreras & Oasis de Pica',
       img: 'salitreras1.jpg',
-      gallery: ['pica2.jpg', 'dinosaurios1.jpg', 'dinosaurios2.jpg'],
+      gallery: ['gigantetarapaca1.jpeg', 'valledelafelicidad1.webp'],
       category: 'Full Day',
       price: 75000,
       familyDiscount: true,
@@ -46,7 +46,7 @@
       id: 'parque-isluga',
       title: 'Tour Parque Nacional Volcan Isluga',
       img: 'parqueisluga1.jpg',
-      gallery: ['puebloisluga1.jpg', 'gigantetarapaca1.jpeg', 'miradorchusmiza1.avif', 'valledelafelicidad1.webp'],
+      gallery: ['puebloisluga1.jpg', 'lagunaroja1.jpg'],
       category: 'Naturaleza',
       price: 110000,
       familyDiscount: true,
@@ -142,7 +142,7 @@
       id: 'salitreras',
       title: 'Tour Salitreras Humberstone & Santa Laura',
       img: 'salitreras2.jpg',
-      gallery: ['salitreras3.jpg'],
+      gallery: ['salitreras3.jpg', 'dinosaurios1.jpg'],
       category: 'Cultura',
       price: 50000,
       familyDiscount: true,
@@ -180,7 +180,7 @@
       id: 'geoglifos',
       title: 'Tour Geoglifos de Pintados',
       img: 'geoglifospintados1.webp',
-      gallery: ['geoglifospintados2.jpg', 'geoglifospintados3.jpeg'],
+      gallery: ['geoglifospintados2.jpg', 'geoglifospintados3.jpeg', 'dinosaurios2.jpg'],
       category: 'Cultura',
       price: 50000,
       familyDiscount: true,
@@ -199,7 +199,7 @@
       id: 'termas-chusmiza',
       title: 'Tour Termas Chusmiza & Gigante de Tarapaca',
       img: 'termaschusmiza1.jpg',
-      gallery: ['miradorchusmiza1.avif', 'gigantetarapaca1.jpeg'],
+      gallery: ['miradorchusmiza1.avif', 'huatacondo2.jpg'],
       category: 'Relax',
       price: 80000,
       familyDiscount: true,
@@ -277,7 +277,7 @@
       id: 'oasis-pica-matilla',
       title: 'Tour Oasis de Pica & Matilla',
       img: 'pica1.jpg',
-      gallery: ['pica2.jpg', 'dinosaurios1.jpg'],
+      gallery: ['pica2.jpg', 'pisagua1.png'],
       category: 'Naturaleza',
       price: 40000,
       familyDiscount: false,
@@ -330,23 +330,25 @@
         { name: 'Maria L.', stars: 5, text: 'Increible experiencia en Bahia! El Christo Redentor es impresionante.', date: '10/07/2026' }
       ]
     },
-    /* ====== BRASIL ÔÇö Plaza de Cavo ====== */
+    /* ====== BRASIL ÔÇö Buzios a Arraial do Cabo ====== */
     {
-      id: 'passeio-barco',
-      title: 'Passeio de Barco (Plaza de Cavo)',
-      img: 'passeio-barco.jpeg',
+      id: 'arraial-buzios',
+      title: 'Buzios a Arraial do Cabo',
+      img: 'arraial-rio.jpeg',
       gallery: [],
       category: 'Brasil',
-      price: 14000,
+      price: 33000,
       familyDiscount: false,
-      desc: 'Paseo en barco de 4 horas por la costa de Plaza de Cavo. Incluye baño.',
-      fullDesc: 'Paseo en barco de 4 horas por la costa de Plaza de Cavo. Incluye oportunidad de bañarse en el mar.',
-      includes: ['Barco', 'Guía', 'Tiempo de baño'],
-      excludes: ['Alimentacion', 'Bebidas', 'Seguro de Viaje'],
-      schedule: 'Diario',
-      destinations: ['Costa de Plaza de Cavo', 'Playas accesibles por mar'],
+      desc: 'Paseo en barco de 3.5 a 4 horas desde Buzios. Visita la Isla del Farol, Prainhas do Pontal de Atalaia y Playa del Forno. Almuerzo buffet incluido.',
+      fullDesc: 'Paseo en barco de 3 a 4 horas partiendo desde Buzios hacia Arraial do Cabo. Recorreras la Isla del Farol, las cristalinas Prainhas do Pontal de Atalaia y la Playa del Forno. Almuerzo buffet incluido en el trayecto. Disfruta de aguas turquesas y paisajes paradisiacos.',
+      includes: ['Barco', 'Guía Turístico', 'Almuerzo Buffet', 'Tiempo de baño'],
+      excludes: ['Bebidas', 'Seguro de Viaje'],
+      schedule: 'Diario - Salida 09:00 hrs',
+      destinations: ['Isla del Farol', 'Prainhas do Pontal de Atalaia', 'Playa del Forno', 'Costa de Arraial do Cabo'],
       tickets: null,
-      reviews: []
+      reviews: [
+        { name: 'Ana P.', stars: 5, text: 'Increíble paseo, las playas son paradisíacas y el almuerzo buffet estuvo delicioso.', date: '05/07/2026' }
+      ]
     },
     /* ====== BRASIL ÔÇö Rio de Janeiro ====== */
     {
@@ -370,22 +372,22 @@
     },
     {
       id: 'rio-tour',
-      title: 'Um Dia em Rio (Rio de Janeiro)',
+      title: 'Tour Río de Janeiro (desde Buzios o Rio)',
       img: 'rio-tour.jpeg',
       gallery: [],
       category: 'Brasil',
       price: 50000,
       familyDiscount: false,
-      desc: 'Un día completo en Río de Janeiro. Cristo Redentor, Pan de Azúcar y ciudad.',
-      fullDesc: 'Recorrido completo por Río de Janeiro: Cristo Redentor, Pan de Azúcar, centro histórico y playas. Transporte, almuerzo y entradas incluidas.',
-      includes: ['Transporte', 'Guía Turístico', 'Ingreso Cristo Redentor', 'Ingreso Pan de Azúcar', 'Almuerzo'],
+      desc: 'Recorrido completo por Río de Janeiro: Maracaná, Sambódromo, Catedral Metropolitana, Escalera Selarón, Cristo Redentor, Ipanema, Leblón y Copacabana.',
+      fullDesc: 'Tour completo por los iconos de Río de Janeiro. Visitaremos el estadio Maracaná, el Sambódromo, la Catedral Metropolitana y la famosa Escalera Selarón. Continuaremos hacia el Cristo Redentor con vistas panorámicas de la ciudad. Recorreremos las playas de Ipanema, Leblón y finalizaremos en Copacabana. Salida desde Río o Búzios.',
+      includes: ['Transporte', 'Guía Turístico', 'Ingreso Cristo Redentor', 'Almuerzo'],
       excludes: ['Bebidas extras', 'Seguro de Viaje'],
       schedule: 'Salida 08:00 hrs - Retorno 20:00 hrs',
-      destinations: ['Cristo Redentor', 'Pan de Azucar', 'Centro de Rio', 'Playas de Copacabana'],
+      destinations: ['Maracaná', 'Sambódromo', 'Catedral Metropolitana', 'Escalera Selarón', 'Cristo Redentor', 'Ipanema', 'Leblón', 'Copacabana'],
       tickets: null,
       reviews: [
-        { name: 'Sofia G.', stars: 5, text: 'Rio es impresionante! El Cristo y el Pan de Azucar son imperdibles.', date: '12/06/2026' },
-        { name: 'Diego L.', stars: 5, text: 'Un dia perfecto, todo muy bien organizado. Recomendado 100%.', date: '28/05/2026' }
+        { name: 'Sofia G.', stars: 5, text: 'Río es impresionante! El Cristo y la Escalera Selarón son imperdibles.', date: '12/06/2026' },
+        { name: 'Diego L.', stars: 5, text: 'Un día perfecto, todo muy bien organizado. Recomendado 100%.', date: '28/05/2026' }
       ]
     },
     {
@@ -407,41 +409,59 @@
         { name: 'Laura M.', stars: 5, text: 'Buzios es un lugar magico. Las playas son hermosas.', date: '18/06/2026' }
       ]
     },
+    /* ====== BRASIL ÔÇö Buzios a Cabo Frio ====== */
     {
-      id: 'petropolis',
-      title: 'Petropolis (Rio)',
-      img: 'petropolis.jpeg',
+      id: 'buzios-cabo-frio',
+      title: 'Buzios a Cabo Frio',
+      img: 'arraial-rio.jpeg',
       gallery: [],
       category: 'Brasil',
-      price: 50000,
+      price: 25000,
       familyDiscount: false,
-      desc: 'Tour a Petrópolis. Transporte, tren histórico, museo y almuerzo.',
-      fullDesc: 'Visita a Petrópolis, la ciudad imperial de Brasil. Incluye transporte, paseo en tren histórico, visita al museo y almuerzo.',
-      includes: ['Transporte', 'Tren histórico', 'Guía Turístico', 'Almuerzo'],
-      excludes: ['Bebidas', 'Seguro de Viaje'],
-      schedule: 'Lunes a Viernes',
-      destinations: ['Petropolis', 'Tren historico', 'Museo', 'Centro historico'],
+      desc: 'Excursión a Cabo Frio desde Búzios. Visita Playa Las Conchas (1h), Playa Peró (1h) e Isla del Japonés (1h).',
+      fullDesc: 'Viaje de un día desde Búzios hasta Cabo Frio. Recorreras tres destinos imperdibles: 1 hora en la hermosa Playa Las Conchas, 1 hora en Playa Peró y 1 hora en la Isla del Japonés. Transporte incluido.',
+      includes: ['Transporte', 'Guía Turístico', 'Tiempo de playa en 3 destinos'],
+      excludes: ['Alimentación', 'Bebidas', 'Seguro de Viaje'],
+      schedule: 'Salida 08:00 hrs - Retorno 18:00 hrs',
+      destinations: ['Playa Las Conchas', 'Playa Peró', 'Isla del Japonés', 'Cabo Frio'],
       tickets: null,
       reviews: []
     },
+    /* ====== BRASIL ÔÇö Buceo en Buzios ====== */
     {
-      id: 'favela-tour',
-      title: 'Favela Tour (Rio)',
-      img: 'favela-tour.jpeg',
+      id: 'buceo-buzios',
+      title: 'Buceo en Búzios',
+      img: 'buceo1.jpg',
       gallery: [],
       category: 'Brasil',
-      price: 33000,
+      price: 19000,
       familyDiscount: false,
-      desc: 'Recorrido por las favelas de Río con guía local y transporte en jeep.',
-      fullDesc: 'Tour cultural por las favelas de Río de Janeiro con guía local. Transporte en jeep, experiencias auténticas y vistas panorámicas.',
-      includes: ['Transporte en Jeep', 'Guía Local', 'Experiencia cultural'],
-      excludes: ['Alimentacion', 'Bebidas', 'Seguro de Viaje'],
-      schedule: 'Diario',
-      destinations: ['Favelas de Rio', 'Vistas panoramicas', 'Comunidad'],
+      desc: 'Buceo en Playa João Fernandes, en el parque de corales de Búzios. Equipo y instructor incluidos.',
+      fullDesc: 'Experiencia de buceo en la Playa João Fernandes de Búzios, ubicada en el parque de corales. Equipo de buceo e instructor profesional incluidos. Disfruta de la rica vida marina y los corales tropicales.',
+      includes: ['Equipo de buceo', 'Instructor', 'Tiempo de buceo'],
+      excludes: ['Transporte', 'Seguro de Viaje'],
+      schedule: 'Diario - Mañana (AM)',
+      destinations: ['Playa João Fernandes', 'Parque de Corales', 'Búzios'],
       tickets: null,
-      reviews: [
-        { name: 'Javier R.', stars: 5, text: 'Experiencia muy emotiva. El guia local te cuenta la realidad de la favela.', date: '22/06/2026' }
-      ]
+      reviews: []
+    },
+    /* ====== BRASIL ÔÇö Tour Astronómico ====== */
+    {
+      id: 'tour-astronomico',
+      title: 'Tour Astronómico (Búzios)',
+      img: 'buzios.jpeg',
+      gallery: [],
+      category: 'Brasil',
+      price: 45000,
+      familyDiscount: false,
+      desc: 'Experiencia astronómica nocturna en Búzios. Observación de estrellas, planetas y constelaciones con telescopio profesional.',
+      fullDesc: 'Tour astronómico nocturno en Búzios. Acompañado de un guía astronómico, observarás estrellas, planetas y constelaciones a través de un telescopio profesional. Aprende sobre el cielo del hemisferio sur en una experiencia única e inolvidable.',
+      includes: ['Telescopio profesional', 'Guía Astronómico', 'Equipo de observación'],
+      excludes: ['Transporte', 'Alimentación', 'Seguro de Viaje'],
+      schedule: 'Nocturno - Según fase lunar',
+      destinations: ['Punto de observación en Búzios', 'Cielo del hemisferio sur'],
+      tickets: null,
+      reviews: []
     }
   ];
 
@@ -453,12 +473,13 @@
     'arriendo-bicicletas': { type: 'tour' },
     /* Brasil */
     'arraial-bahia': { type: 'tour', needsPickup: true },
-    'passeio-barco': { type: 'tour', needsPickup: true },
+    'arraial-buzios': { type: 'tour', needsPickup: true },
     'arraial-rio': { type: 'tour', needsPickup: true },
     'rio-tour': { type: 'tour', needsPickup: true },
     'buzios': { type: 'tour', needsPickup: true },
-    'petropolis': { type: 'tour', needsPickup: true },
-    'favela-tour': { type: 'tour', needsPickup: true }
+    'buzios-cabo-frio': { type: 'tour', needsPickup: true },
+    'buceo-buzios': { type: 'activity' },
+    'tour-astronomico': { type: 'tour' }
   };
 
   /* =============================================
@@ -552,14 +573,11 @@
         { name: 'Ana P.', stars: 5, text: 'Excelente tour, el barco es genial y las playas son paradisíacas.', date: '05/07/2026' }
       ],
       'rio-tour': [
-        { name: 'Sofía G.', stars: 5, text: '¡Río es impresionante! El Cristo y el Pan de Azúcar son imperdibles.', date: '12/06/2026' },
+        { name: 'Sofía G.', stars: 5, text: '¡Río es impresionante! El Cristo y la Escalera Selarón son imperdibles.', date: '12/06/2026' },
         { name: 'Diego L.', stars: 5, text: 'Un día perfecto, todo muy bien organizado. Recomendado 100%.', date: '28/05/2026' }
       ],
       'buzios': [
         { name: 'Laura M.', stars: 5, text: 'Búzios es un lugar mágico. Las playas son hermosas.', date: '18/06/2026' }
-      ],
-      'favela-tour': [
-        { name: 'Javier R.', stars: 5, text: 'Experiencia muy emotiva. El guía local te cuenta la realidad de la favela.', date: '22/06/2026' }
       ]
     };
     Object.keys(seeds).forEach(function(tourId) {
@@ -704,51 +722,36 @@
       var reviews = getReviews(t.id);
       var avg = getAvgRating(t.id);
       var ratingHTML = avg ? '<span class="tour-card-rating"><span class="rating-num">' + avg + '</span><span class="rating-star">★</span><span class="rating-count">· ' + reviews.length + ' opiniones</span></span>' : '';
-      var incItems = (t.includes || []).slice(0, 4).map(function(i) { return '<li>' + i + '</li>'; }).join('');
-      var excItems = (t.excludes || []).slice(0, 3).map(function(x) { return '<li>' + x + '</li>'; }).join('');
       card.innerHTML =
-        '<div class="tour-card-inner">' +
-          /* FRONT */
-          '<div class="tour-card-front">' +
-            '<div class="tour-card-image">' +
-              '<div class="tour-slides">' +
-                '<div class="tour-slide active" style="background-image:url(img/tours/' + t.img + ')"></div>' +
-                (t.gallery || []).map(function(g) {
-                  return '<div class="tour-slide" style="background-image:url(img/tours/' + g + ')"></div>';
-                }).join('') +
-              '</div>' +
-              '<span class="tour-card-badge">' + t.category + '</span>' + discountBadge + ratingHTML +
-              '<div class="tour-card-dots">' +
-                '<span class="dot active"></span>' +
-                (t.gallery || []).map(function() { return '<span class="dot"></span>'; }).join('') +
-              '</div>' +
-              '<div class="tour-card-overlay"></div>' +
-            '</div>' +
-            '<div class="tour-card-front-info">' +
-              '<h3>' + t.title + '</h3>' +
-              '<div class="price-row">' +
-                '<span class="tour-card-price">$' + formatPrice(t.price) + '</span>' +
-                '<span class="schedule-tag">' + t.schedule.split(' - ')[0] + '</span>' +
-              '</div>' +
-              '<div class="hover-hint">Hover para ver detalles →</div>' +
-            '</div>' +
+        '<div class="tour-card-image">' +
+          '<div class="tour-slides">' +
+            '<div class="tour-slide active" style="background-image:url(img/tours/' + t.img + ')"></div>' +
+            (t.gallery || []).map(function(g) {
+              return '<div class="tour-slide" style="background-image:url(img/tours/' + g + ')"></div>';
+            }).join('') +
           '</div>' +
-          /* BACK */
-          '<div class="tour-card-back">' +
-            '<div class="tour-card-back-header">' +
-              '<h3>' + t.title + '</h3>' +
-              '<div class="back-price">$' + formatPrice(t.price) + '</div>' +
-            '</div>' +
-            '<div class="tour-card-back-body">' +
-              '<p class="back-desc">' + t.desc + '</p>' +
-              (incItems ? '<div class="back-section"><div class="back-label">Incluye</div><ul class="back-list">' + incItems + '</ul></div>' : '') +
-              (excItems ? '<div class="back-section"><div class="back-label">No incluye</div><ul class="back-list back-excludes">' + excItems + '</ul></div>' : '') +
-              '<div class="back-section"><div class="back-label">Horario</div><div style="font-size:11px;color:rgba(255,255,255,0.8)">' + t.schedule + '</div></div>' +
-            '</div>' +
-            '<div class="tour-card-back-actions">' +
-              '<button class="btn-back-details" data-tour-id="' + t.id + '">Ver detalles</button>' +
-              '<button class="btn-back-agendar" data-tour-id="' + t.id + '">Agendar</button>' +
-            '</div>' +
+          '<span class="tour-card-badge">' + t.category + '</span>' + discountBadge + ratingHTML +
+          '<div class="tour-card-dots">' +
+            '<span class="dot active"></span>' +
+            (t.gallery || []).map(function() { return '<span class="dot"></span>'; }).join('') +
+          '</div>' +
+          '<div class="tour-card-overlay"></div>' +
+        '</div>' +
+        '<div class="tour-card-body">' +
+          '<div class="tour-card-top">' +
+            '<h3>' + t.title + '</h3>' +
+            '<span class="tour-card-price">$' + formatPrice(t.price) + '</span>' +
+          '</div>' +
+          '<p class="tour-card-desc">' + t.desc + '</p>' +
+          '<div class="tour-card-meta">' +
+            '<span class="meta-item">' + t.schedule.split(' - ')[0] + '</span>' +
+            '<span class="meta-dot"></span>' +
+            '<span class="meta-item">' + reviews.length + ' opiniones</span>' +
+          '</div>' +
+          cardIncludesHTML(t) +
+          '<div class="tour-card-actions">' +
+            '<button class="btn-details" data-tour-id="' + t.id + '">Ver detalles</button>' +
+            '<button class="btn-agendar" data-tour-id="' + t.id + '">Agendar</button>' +
           '</div>' +
         '</div>';
       container.appendChild(card);
@@ -1040,28 +1043,18 @@
   if (modalHeroEl) modalHeroEl.addEventListener('click', function() { setModalImage(modalImageIndex + 1); });
 
   document.addEventListener('click', function(e) {
-    var btn = e.target.closest('.btn-details, .btn-back-details');
+    var btn = e.target.closest('.btn-details');
     if (btn) {
       e.preventDefault();
-      openModal(btn.getAttribute('data-tour-id'), false);
+      openModal(btn.getAttribute('data-tour-id'), btn.classList.contains('btn-agendar'));
       return;
     }
-    var ag = e.target.closest('.btn-agendar, .btn-back-agendar');
+    var ag = e.target.closest('.btn-agendar');
     if (ag) {
       e.preventDefault();
       openModal(ag.getAttribute('data-tour-id'), true);
     }
   });
-
-  /* Mobile: tap to flip */
-  if ('ontouchstart' in window) {
-    document.addEventListener('click', function(e) {
-      var card = e.target.closest('.tour-card');
-      if (card && !e.target.closest('button')) {
-        card.classList.toggle('flipped');
-      }
-    });
-  }
 
   /* --- COTIZACIóN FORM --- */
   var cotizacionForm = document.getElementById('cotizacion-form');
