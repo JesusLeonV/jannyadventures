@@ -175,7 +175,7 @@ a { text-decoration: none; color: inherit; }
 /* TOUR CARD FLIP */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
-.tour-card {
+.tour-card { overflow: hidden;
   perspective: 1000px; height: 380px;
   animation: fadeInUp 0.4s ease both;
 }
@@ -254,7 +254,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Mobile: tap to flip */
 @media (max-width: 768px) {
-  .tour-card { height: 340px; }
+  .tour-card { overflow: hidden; height: 340px; }
   .tour-card:hover .tour-card-inner { transform: none; }
   .tour-card.flipped .tour-card-inner { transform: rotateY(180deg); }
   .tour-card-front-info .hover-hint { display: none; }
@@ -555,7 +555,7 @@ a { text-decoration: none; color: inherit; }
 
   /* TOURS */
   .tours-grid { grid-template-columns: 1fr; gap: 16px; }
-  .tour-card { height: 360px; }
+  .tour-card { overflow: hidden; height: 360px; }
 
   /* GUIDE */
   .guide-layout { grid-template-columns: 1fr; text-align: center; }
@@ -602,13 +602,13 @@ a { text-decoration: none; color: inherit; }
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 180px; }
   .gi-wide { grid-column: span 1; }
-  .tour-card { height: 340px; }
+  .tour-card { overflow: hidden; height: 340px; }
   .modal-hero { height: 160px; }
 }
 
 
 /* TOUR CARD CAROUSEL */
-.tour-slides { position: relative; height: 180px; }
+.tour-slides { position: relative; height: 200px; }
 .tour-slide {
   position: absolute; inset: 0;
   background-size: cover; background-position: center;
@@ -631,3 +631,31 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.3s ease; padding: 0;
 }
 .tour-card-dots .dot.active { background: white; width: 18px; border-radius: 3px; }
+
+/* REGION FILTERS */
+.region-filters {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.region-btn {
+  padding: 10px 28px; border: 2px solid var(--border); background: var(--white);
+  border-radius: 50px; font-size: 14px; font-weight: 700; color: var(--text-light);
+  cursor: pointer; transition: all var(--transition);
+}
+.region-btn:hover { border-color: var(--orange); color: var(--orange); }
+.region-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+.sub-filters {
+  display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 40px;
+}
+.sub-filter-btn {
+  padding: 6px 16px; border: 1px solid var(--border); background: var(--white);
+  border-radius: 50px; font-size: 12px; font-weight: 600; color: var(--text-muted);
+  cursor: pointer; transition: all var(--transition);
+}
+.sub-filter-btn:hover { border-color: var(--orange); color: var(--orange); }
+.sub-filter-btn.active { background: var(--orange); color: white; border-color: var(--orange); }
+@media (max-width: 768px) {
+  .region-filters { flex-wrap: wrap; }
+  .region-btn { padding: 8px 20px; font-size: 13px; }
+  .sub-filters { gap: 4px; }
+  .sub-filter-btn { padding: 5px 12px; font-size: 11px; }
+}

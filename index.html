@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=26">
+  <link rel="stylesheet" href="css/style.css?v=27">
 </head>
 <body>
 
@@ -108,15 +108,12 @@
         <h2>Elige tu <span>próxima aventura</span></h2>
         <p>Tours exclusivos en Iquique, Brasil y Latinoamérica</p>
       </div>
-      <div class="tour-filters" id="tour-filters">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="Aventura">Aventura</button>
-        <button class="filter-btn" data-filter="Naturaleza">Naturaleza</button>
-        <button class="filter-btn" data-filter="Cultura">Cultura</button>
-        <button class="filter-btn" data-filter="Relax">Relax</button>
-        <button class="filter-btn" data-filter="Deporte">Deporte</button>
-        <button class="filter-btn" data-filter="Brasil">Brasil</button>
+      <div class="region-filters" id="region-filters">
+        <button class="region-btn active" data-region="all">Todos</button>
+        <button class="region-btn" data-region="Chile">Chile</button>
+        <button class="region-btn" data-region="Brasil">Brasil</button>
       </div>
+      <div class="sub-filters" id="sub-filters"></div>
       <div class="tours-grid" id="tours-grid"></div>
     </div>
   </section>
@@ -234,6 +231,7 @@
                 <option value="parapente">Parapente en Iquique</option>
                 <option value="buceo">Buceo en Iquique</option>
                 <option value="oasis-pica-matilla">Tour Oasis de Pica & Matilla</option>
+                <option value="tour-astronomico">Tour Astronómico (Iquique)</option>
                 <optgroup label="Brasil">
                   <option value="arraial-bahia">Arraijal Full Day (Bahía)</option>
                   <option value="arraial-buzios">Buzios a Arraial do Cabo</option>
@@ -242,7 +240,6 @@
                   <option value="buzios">Buzios (Rio)</option>
                   <option value="buzios-cabo-frio">Buzios a Cabo Frio</option>
                   <option value="buceo-buzios">Buceo en Búzios</option>
-                  <option value="tour-astronomico">Tour Astronómico (Búzios)</option>
                 </optgroup>
               </select>
             </div>
@@ -415,6 +412,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=26"></script>
+  <script src="js/app.js?v=27"></script>
 </body>
 </html>

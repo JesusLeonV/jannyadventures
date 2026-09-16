@@ -448,18 +448,18 @@
     /* ====== BRASIL ÔÇö Tour Astronómico ====== */
     {
       id: 'tour-astronomico',
-      title: 'Tour Astronómico (Búzios)',
+      title: 'Tour Astronómico (Iquique)',
       img: 'buzios.jpeg',
       gallery: [],
-      category: 'Brasil',
+      category: 'Astronomía',
       price: 45000,
       familyDiscount: false,
-      desc: 'Experiencia astronómica nocturna en Búzios. Observación de estrellas, planetas y constelaciones con telescopio profesional.',
-      fullDesc: 'Tour astronómico nocturno en Búzios. Acompañado de un guía astronómico, observarás estrellas, planetas y constelaciones a través de un telescopio profesional. Aprende sobre el cielo del hemisferio sur en una experiencia única e inolvidable.',
+      desc: 'Experiencia astronómica nocturna en el desierto de Tarapacá. Observación de estrellas, planetas y constelaciones con telescopio profesional.',
+      fullDesc: 'Tour astronómico nocturno en los alrededores de Iquique, en pleno desierto de Tarapacá. Acompañado de un guía astronómico, observarás estrellas, planetas y constelaciones a través de un telescopio profesional. El cielo desértico sin contaminación lumínica ofrece una visión privilegiada del hemisferio sur.',
       includes: ['Telescopio profesional', 'Guía Astronómico', 'Equipo de observación'],
       excludes: ['Transporte', 'Alimentación', 'Seguro de Viaje'],
       schedule: 'Nocturno - Según fase lunar',
-      destinations: ['Punto de observación en Búzios', 'Cielo del hemisferio sur'],
+      destinations: ['Desierto de Tarapacá', 'Cielo del hemisferio sur'],
       tickets: null,
       reviews: []
     }
@@ -702,13 +702,45 @@
 
   /* --- RENDER TOUR CARDS --- */
   var container = document.getElementById('tours-grid');
-  var filterBar = document.getElementById('tour-filters');
-  var activeFilter = 'all';
+  var activeRegion = 'all';
+  var activeCategory = 'all';
 
-  function renderCards(filter) {
+  function getRegion(t) {
+    return t.category === 'Brasil' ? 'Brasil' : 'Chile';
+  }
+
+  function getCategoriesForRegion(region) {
+    var cats = {};
+    TOURS.forEach(function(t) {
+      var r = getRegion(t);
+      if (region === 'all' || r === region) {
+        cats[t.category] = true;
+      }
+    });
+    return Object.keys(cats).sort();
+  }
+
+  function renderSubFilters() {
+    var subContainer = document.getElementById('sub-filters');
+    if (!subContainer) return;
+    var cats = getCategoriesForRegion(activeRegion);
+    var html = '<button class="sub-filter-btn' + (activeCategory === 'all' ? ' active' : '') + '" data-category="all">Todos</button>';
+    cats.forEach(function(c) {
+      html += '<button class="sub-filter-btn' + (activeCategory === c ? ' active' : '') + '" data-category="' + c + '">' + c + '</button>';
+    });
+    subContainer.innerHTML = html;
+  }
+
+  function renderCards() {
     if (!container) return;
     container.innerHTML = '';
-    var filtered = filter === 'all' ? TOURS.slice() : TOURS.filter(function(t) { return t.category === filter; });
+    var filtered = TOURS.slice();
+    if (activeRegion !== 'all') {
+      filtered = filtered.filter(function(t) { return getRegion(t) === activeRegion; });
+    }
+    if (activeCategory !== 'all') {
+      filtered = filtered.filter(function(t) { return t.category === activeCategory; });
+    }
     filtered.sort(function(a, b) {
       var avgA = parseFloat(getAvgRating(a.id)) || 0;
       var avgB = parseFloat(getAvgRating(b.id)) || 0;
@@ -773,18 +805,38 @@
     });
   }
 
-  renderCards('all');
+  renderSubFilters();
+  renderCards();
 
-  if (filterBar) {
-    filterBar.addEventListener('click', function(e) {
-      var btn = e.target.closest('.filter-btn');
+  /* Region filter buttons */
+  var regionBar = document.getElementById('region-filters');
+  if (regionBar) {
+    regionBar.addEventListener('click', function(e) {
+      var btn = e.target.closest('.region-btn');
       if (!btn) return;
-      var f = btn.getAttribute('data-filter');
-      if (f === activeFilter) return;
-      activeFilter = f;
-      filterBar.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      var r = btn.getAttribute('data-region');
+      if (r === activeRegion) return;
+      activeRegion = r;
+      activeCategory = 'all';
+      regionBar.querySelectorAll('.region-btn').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      renderCards(f);
+      renderSubFilters();
+      renderCards();
+    });
+  }
+
+  /* Sub-filter buttons (delegated) */
+  var subFilterBar = document.getElementById('sub-filters');
+  if (subFilterBar) {
+    subFilterBar.addEventListener('click', function(e) {
+      var btn = e.target.closest('.sub-filter-btn');
+      if (!btn) return;
+      var c = btn.getAttribute('data-category');
+      if (c === activeCategory) return;
+      activeCategory = c;
+      subFilterBar.querySelectorAll('.sub-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderCards();
     });
   }
 
@@ -906,7 +958,7 @@
         addReview(t.id, name, selectedStars, text);
         reviewForm.style.display = 'none';
         document.getElementById('review-success').style.display = 'block';
-        renderCards(activeFilter);
+        renderCards();
         setTimeout(function() {
           reviewForm.style.display = '';
           document.getElementById('review-success').style.display = 'none';
