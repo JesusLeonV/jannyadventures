@@ -722,36 +722,51 @@
       var reviews = getReviews(t.id);
       var avg = getAvgRating(t.id);
       var ratingHTML = avg ? '<span class="tour-card-rating"><span class="rating-num">' + avg + '</span><span class="rating-star">★</span><span class="rating-count">· ' + reviews.length + ' opiniones</span></span>' : '';
+      var incItems = (t.includes || []).slice(0, 4).map(function(i) { return '<li>' + i + '</li>'; }).join('');
+      var excItems = (t.excludes || []).slice(0, 3).map(function(x) { return '<li>' + x + '</li>'; }).join('');
       card.innerHTML =
-        '<div class="tour-card-image">' +
-          '<div class="tour-slides">' +
-            '<div class="tour-slide active" style="background-image:url(img/tours/' + t.img + ')"></div>' +
-            (t.gallery || []).map(function(g) {
-              return '<div class="tour-slide" style="background-image:url(img/tours/' + g + ')"></div>';
-            }).join('') +
+        '<div class="tour-card-inner">' +
+          /* FRONT */
+          '<div class="tour-card-front">' +
+            '<div class="tour-card-image">' +
+              '<div class="tour-slides">' +
+                '<div class="tour-slide active" style="background-image:url(img/tours/' + t.img + ')"></div>' +
+                (t.gallery || []).map(function(g) {
+                  return '<div class="tour-slide" style="background-image:url(img/tours/' + g + ')"></div>';
+                }).join('') +
+              '</div>' +
+              '<span class="tour-card-badge">' + t.category + '</span>' + discountBadge + ratingHTML +
+              '<div class="tour-card-dots">' +
+                '<span class="dot active"></span>' +
+                (t.gallery || []).map(function() { return '<span class="dot"></span>'; }).join('') +
+              '</div>' +
+              '<div class="tour-card-overlay"></div>' +
+            '</div>' +
+            '<div class="tour-card-front-info">' +
+              '<h3>' + t.title + '</h3>' +
+              '<div class="price-row">' +
+                '<span class="tour-card-price">$' + formatPrice(t.price) + '</span>' +
+                '<span class="schedule-tag">' + t.schedule.split(' - ')[0] + '</span>' +
+              '</div>' +
+              '<div class="hover-hint">Hover para ver detalles →</div>' +
+            '</div>' +
           '</div>' +
-          '<span class="tour-card-badge">' + t.category + '</span>' + discountBadge + ratingHTML +
-          '<div class="tour-card-dots">' +
-            '<span class="dot active"></span>' +
-            (t.gallery || []).map(function() { return '<span class="dot"></span>'; }).join('') +
-          '</div>' +
-          '<div class="tour-card-overlay"></div>' +
-        '</div>' +
-        '<div class="tour-card-body">' +
-          '<div class="tour-card-top">' +
-            '<h3>' + t.title + '</h3>' +
-            '<span class="tour-card-price">$' + formatPrice(t.price) + '</span>' +
-          '</div>' +
-          '<p class="tour-card-desc">' + t.desc + '</p>' +
-          '<div class="tour-card-meta">' +
-            '<span class="meta-item">' + t.schedule.split(' - ')[0] + '</span>' +
-            '<span class="meta-dot"></span>' +
-            '<span class="meta-item">' + reviews.length + ' opiniones</span>' +
-          '</div>' +
-          cardIncludesHTML(t) +
-          '<div class="tour-card-actions">' +
-            '<button class="btn-details" data-tour-id="' + t.id + '">Ver detalles</button>' +
-            '<button class="btn-agendar" data-tour-id="' + t.id + '">Agendar</button>' +
+          /* BACK */
+          '<div class="tour-card-back">' +
+            '<div class="tour-card-back-header">' +
+              '<h3>' + t.title + '</h3>' +
+              '<div class="back-price">$' + formatPrice(t.price) + '</div>' +
+            '</div>' +
+            '<div class="tour-card-back-body">' +
+              '<p class="back-desc">' + t.desc + '</p>' +
+              (incItems ? '<div class="back-section"><div class="back-label">Incluye</div><ul class="back-list">' + incItems + '</ul></div>' : '') +
+              (excItems ? '<div class="back-section"><div class="back-label">No incluye</div><ul class="back-list back-excludes">' + excItems + '</ul></div>' : '') +
+              '<div class="back-section"><div class="back-label">Horario</div><div style="font-size:11px;color:rgba(255,255,255,0.8)">' + t.schedule + '</div></div>' +
+            '</div>' +
+            '<div class="tour-card-back-actions">' +
+              '<button class="btn-back-details" data-tour-id="' + t.id + '">Ver detalles</button>' +
+              '<button class="btn-back-agendar" data-tour-id="' + t.id + '">Agendar</button>' +
+            '</div>' +
           '</div>' +
         '</div>';
       container.appendChild(card);
@@ -1043,13 +1058,13 @@
   if (modalHeroEl) modalHeroEl.addEventListener('click', function() { setModalImage(modalImageIndex + 1); });
 
   document.addEventListener('click', function(e) {
-    var btn = e.target.closest('.btn-details');
+    var btn = e.target.closest('.btn-details, .btn-back-details');
     if (btn) {
       e.preventDefault();
-      openModal(btn.getAttribute('data-tour-id'), btn.classList.contains('btn-agendar'));
+      openModal(btn.getAttribute('data-tour-id'), btn.classList.contains('btn-agendar') || btn.classList.contains('btn-back-agendar'));
       return;
     }
-    var ag = e.target.closest('.btn-agendar');
+    var ag = e.target.closest('.btn-agendar, .btn-back-agendar');
     if (ag) {
       e.preventDefault();
       openModal(ag.getAttribute('data-tour-id'), true);
